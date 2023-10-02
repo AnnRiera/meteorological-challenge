@@ -1,0 +1,8 @@
+openapi: "3.0.3"
+info:
+  title: "metereological_challenge API"
+  description: "metereological_challenge API"
+  version: "1.0.0"
+servers:
+- url: "https://metereological_challenge"
+paths: {}
