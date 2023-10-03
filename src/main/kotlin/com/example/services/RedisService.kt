@@ -1,9 +1,10 @@
 package com.example.services
 
 import com.example.models.Locations
+import com.example.models.Logs
 import com.redis.lettucemod.RedisModulesClient
 import com.redis.lettucemod.api.StatefulRedisModulesConnection
-import com.redis.lettucemod.api.sync.RedisJSONCommands
+import com.redis.lettucemod.api.sync.RedisModulesCommands
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
 
@@ -13,15 +14,14 @@ object RedisService {
         return redisClient.connect()
     }
 
-    private fun execute(): RedisJSONCommands<String, String> {
+    private fun execute(): RedisModulesCommands<String, String> {
         val connection = init()
         return connection.sync()
     }
 
     fun insert(locations: MutableList<Locations>) {
-        val exec = execute()
-
         try {
+            val exec = execute()
             for (location in locations) {
                 val jsonString = Json.encodeToString(location)
                 exec.jsonSet(location.location.name, "$", jsonString)
@@ -46,5 +46,12 @@ object RedisService {
             println(e)
             throw Error(e.message)
         }
+    }
+
+    fun addLog(log: Logs) {
+        val exec = execute()
+        val jsonString = Json.encodeToString(log)
+        exec.jsonSet("Log-${java.time.Instant.now().toEpochMilli()}", "$", jsonString)
+        init().close()
     }
 }

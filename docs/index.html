@@ -706,8 +706,8 @@
             <li class="nav-fixed nav-header active" data-group="_"><a href="#api-_">API Summary</a></li>
 
                   <li class="nav-header" data-group="Default"><a href="#api-Default">API Methods - Default</a></li>
-                    <li data-group="Default" data-name="rootGet" class="">
-                      <a href="#api-Default-rootGet">rootGet</a>
+                    <li data-group="Default" data-name="locationNameGet" class="">
+                      <a href="#api-Default-locationNameGet">locationNameGet</a>
                     </li>
           </ul>
         </nav>
@@ -730,43 +730,43 @@
         <div id="sections">
                 <section id="api-Default">
                   <h1>Default</h1>
-                    <div id="api-Default-rootGet">
-                      <article id="api-Default-rootGet-0" data-group="User" data-name="rootGet" data-version="0">
+                    <div id="api-Default-locationNameGet">
+                      <article id="api-Default-locationNameGet-0" data-group="User" data-name="locationNameGet" data-version="0">
                         <div class="pull-left">
-                          <h1>rootGet</h1>
+                          <h1>locationNameGet</h1>
                           <p></p>
                         </div>
                         <div class="pull-right"></div>
                         <div class="clearfix"></div>
                         <p></p>
-                        <p class="marked">Hello World!</p>
+                        <p class="marked">Get location by name</p>
                         <p></p>
                         <br />
-                        <pre class="prettyprint language-html prettyprinted" data-type="get"><code><span class="pln">/</span></code></pre>
+                        <pre class="prettyprint language-html prettyprinted" data-type="get"><code><span class="pln">/location/{name}</span></code></pre>
                         <p>
                           <h3>Usage and SDK Samples</h3>
                         </p>
                         <ul class="nav nav-tabs nav-tabs-examples">
-                          <li class="active"><a href="#examples-Default-rootGet-0-curl">Curl</a></li>
-                          <li class=""><a href="#examples-Default-rootGet-0-java">Java</a></li>
-                          <li class=""><a href="#examples-Default-rootGet-0-android">Android</a></li>
-                          <!--<li class=""><a href="#examples-Default-rootGet-0-groovy">Groovy</a></li>-->
-                          <li class=""><a href="#examples-Default-rootGet-0-objc">Obj-C</a></li>
-                          <li class=""><a href="#examples-Default-rootGet-0-javascript">JavaScript</a></li>
-                          <!--<li class=""><a href="#examples-Default-rootGet-0-angular">Angular</a></li>-->
-                          <li class=""><a href="#examples-Default-rootGet-0-csharp">C#</a></li>
-                          <li class=""><a href="#examples-Default-rootGet-0-php">PHP</a></li>
-                          <li class=""><a href="#examples-Default-rootGet-0-perl">Perl</a></li>
-                          <li class=""><a href="#examples-Default-rootGet-0-python">Python</a></li>
+                          <li class="active"><a href="#examples-Default-locationNameGet-0-curl">Curl</a></li>
+                          <li class=""><a href="#examples-Default-locationNameGet-0-java">Java</a></li>
+                          <li class=""><a href="#examples-Default-locationNameGet-0-android">Android</a></li>
+                          <!--<li class=""><a href="#examples-Default-locationNameGet-0-groovy">Groovy</a></li>-->
+                          <li class=""><a href="#examples-Default-locationNameGet-0-objc">Obj-C</a></li>
+                          <li class=""><a href="#examples-Default-locationNameGet-0-javascript">JavaScript</a></li>
+                          <!--<li class=""><a href="#examples-Default-locationNameGet-0-angular">Angular</a></li>-->
+                          <li class=""><a href="#examples-Default-locationNameGet-0-csharp">C#</a></li>
+                          <li class=""><a href="#examples-Default-locationNameGet-0-php">PHP</a></li>
+                          <li class=""><a href="#examples-Default-locationNameGet-0-perl">Perl</a></li>
+                          <li class=""><a href="#examples-Default-locationNameGet-0-python">Python</a></li>
                         </ul>
 
                         <div class="tab-content">
-                          <div class="tab-pane active" id="examples-Default-rootGet-0-curl">
+                          <div class="tab-pane active" id="examples-Default-locationNameGet-0-curl">
                            <pre class="prettyprint"><code class="language-bsh">curl -X GET\
--H "Accept: text/plain"\
-"http://0.0.0.0:8080/"</code></pre>
+-H "Accept: application/json"\
+"http://0.0.0.0:8080/location/{name}"</code></pre>
                           </div>
-                          <div class="tab-pane" id="examples-Default-rootGet-0-java">
+                          <div class="tab-pane" id="examples-Default-locationNameGet-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
 import io.swagger.client.auth.*;
 import io.swagger.client.model.*;
@@ -780,44 +780,47 @@ public class DefaultApiExample {
     public static void main(String[] args) {
         
         DefaultApi apiInstance = new DefaultApi();
+        String name = name_example; // String | 
         try {
-            'String' result = apiInstance.rootGet();
+            Object result = apiInstance.locationNameGet(name);
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling DefaultApi#rootGet");
+            System.err.println("Exception when calling DefaultApi#locationNameGet");
             e.printStackTrace();
         }
     }
 }</code></pre>
                           </div>
 
-                          <div class="tab-pane" id="examples-Default-rootGet-0-android">
+                          <div class="tab-pane" id="examples-Default-locationNameGet-0-android">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.api.DefaultApi;
 
 public class DefaultApiExample {
 
     public static void main(String[] args) {
         DefaultApi apiInstance = new DefaultApi();
+        String name = name_example; // String | 
         try {
-            'String' result = apiInstance.rootGet();
+            Object result = apiInstance.locationNameGet(name);
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling DefaultApi#rootGet");
+            System.err.println("Exception when calling DefaultApi#locationNameGet");
             e.printStackTrace();
         }
     }
 }</code></pre>
                           </div>
   <!--
-  <div class="tab-pane" id="examples-Default-rootGet-0-groovy">
+  <div class="tab-pane" id="examples-Default-locationNameGet-0-groovy">
   <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
   </div> -->
-                            <div class="tab-pane" id="examples-Default-rootGet-0-objc">
-                              <pre class="prettyprint"><code class="language-cpp">
+                            <div class="tab-pane" id="examples-Default-locationNameGet-0-objc">
+                              <pre class="prettyprint"><code class="language-cpp">String *name = name_example; // 
+
 DefaultApi *apiInstance = [[DefaultApi alloc] init];
 
-[apiInstance rootGetWithCompletionHandler: 
-              ^('String' output, NSError* error) {
+[apiInstance locationNameGetWith:name
+              completionHandler: ^(Object output, NSError* error) {
                             if (output) {
                                 NSLog(@"%@", output);
                             }
@@ -828,10 +831,12 @@ DefaultApi *apiInstance = [[DefaultApi alloc] init];
 </code></pre>
                             </div>
 
-                            <div class="tab-pane" id="examples-Default-rootGet-0-javascript">
+                            <div class="tab-pane" id="examples-Default-locationNameGet-0-javascript">
                               <pre class="prettyprint"><code class="language-js">var ApplicationApi = require('application_api');
 
 var api = new ApplicationApi.DefaultApi()
+var name = name_example; // {{String}} 
+
 var callback = function(error, data, response) {
   if (error) {
     console.error(error);
@@ -839,14 +844,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.rootGet(callback);
+api.locationNameGet(name, callback);
 </code></pre>
                             </div>
 
-                            <!--<div class="tab-pane" id="examples-Default-rootGet-0-angular">
+                            <!--<div class="tab-pane" id="examples-Default-locationNameGet-0-angular">
               <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
             </div>-->
-                            <div class="tab-pane" id="examples-Default-rootGet-0-csharp">
+                            <div class="tab-pane" id="examples-Default-locationNameGet-0-csharp">
                               <pre class="prettyprint"><code class="language-cs">using System;
 using System.Diagnostics;
 using IO.Swagger.Api;
@@ -855,21 +860,22 @@ using IO.Swagger.Model;
 
 namespace Example
 {
-    public class rootGetExample
+    public class locationNameGetExample
     {
         public void main()
         {
 
             var apiInstance = new DefaultApi();
+            var name = name_example;  // String | 
 
             try
             {
-                'String' result = apiInstance.rootGet();
+                Object result = apiInstance.locationNameGet(name);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling DefaultApi.rootGet: " + e.Message );
+                Debug.Print("Exception when calling DefaultApi.locationNameGet: " + e.Message );
             }
         }
     }
@@ -877,38 +883,40 @@ namespace Example
 </code></pre>
                             </div>
 
-                            <div class="tab-pane" id="examples-Default-rootGet-0-php">
+                            <div class="tab-pane" id="examples-Default-locationNameGet-0-php">
                               <pre class="prettyprint"><code class="language-php"><&#63;php
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Swagger\Client\ApiDefaultApi();
+$name = name_example; // String | 
 
 try {
-    $result = $api_instance->rootGet();
+    $result = $api_instance->locationNameGet($name);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling DefaultApi->rootGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling DefaultApi->locationNameGet: ', $e->getMessage(), PHP_EOL;
 }
 ?></code></pre>
                             </div>
 
-                            <div class="tab-pane" id="examples-Default-rootGet-0-perl">
+                            <div class="tab-pane" id="examples-Default-locationNameGet-0-perl">
                               <pre class="prettyprint"><code class="language-perl">use Data::Dumper;
 use WWW::SwaggerClient::Configuration;
 use WWW::SwaggerClient::DefaultApi;
 
 my $api_instance = WWW::SwaggerClient::DefaultApi->new();
+my $name = name_example; # String | 
 
 eval { 
-    my $result = $api_instance->rootGet();
+    my $result = $api_instance->locationNameGet(name => $name);
     print Dumper($result);
 };
 if ($@) {
-    warn "Exception when calling DefaultApi->rootGet: $@\n";
+    warn "Exception when calling DefaultApi->locationNameGet: $@\n";
 }</code></pre>
                             </div>
 
-                            <div class="tab-pane" id="examples-Default-rootGet-0-python">
+                            <div class="tab-pane" id="examples-Default-locationNameGet-0-python">
                               <pre class="prettyprint"><code class="language-python">from __future__ import print_statement
 import time
 import swagger_client
@@ -917,17 +925,44 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = swagger_client.DefaultApi()
+name = name_example # String | 
 
 try: 
-    api_response = api_instance.root_get()
+    api_response = api_instance.location_name_get(name)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling DefaultApi->rootGet: %s\n" % e)</code></pre>
+    print("Exception when calling DefaultApi->locationNameGet: %s\n" % e)</code></pre>
                             </div>
                           </div>
 
                           <h2>Parameters</h2>
 
+                            <div class="methodsubtabletitle">Path parameters</div>
+                            <table id="methodsubtable">
+                                <tr>
+                                  <th width="150px">Name</th>
+                                  <th>Description</th>
+                                </tr>
+                                  <tr><td style="width:150px;">name*</td>
+                                  <td>
+                                  
+                                  
+                                      <div id="d2e199_locationNameGet_name">
+                                          <div class="json-schema-view">
+                                              <div class="primitive">
+                                                  <span class="type">
+                                                      String
+                                                  </span>
+                                  
+                                              </div>
+                                                  <div class="inner required">
+                                                      Required
+                                                  </div>
+                                          </div>
+                                      </div>
+                                  </td>
+                                  </tr>
+                            </table>
 
 
 
@@ -938,33 +973,73 @@ except ApiException as e:
 
                             <ul class="nav nav-tabs nav-tabs-examples" >
                                 <li class="active">
-                                  <a data-toggle="tab" href="#responses-rootGet-200-schema">Schema</a>
+                                  <a data-toggle="tab" href="#responses-locationNameGet-200-schema">Schema</a>
                                 </li>
 
                             </ul>
 
                             <div class="tab-content" style='margin-bottom: 10px;'>
-                                <div class="tab-pane active" id="responses-rootGet-200-schema">
-                                  <div id='responses-rootGet-200-schema-200' style="padding: 30px; border-left: 1px solid #eee; border-right: 1px solid #eee; border-bottom: 1px solid #eee;">
+                                <div class="tab-pane active" id="responses-locationNameGet-200-schema">
+                                  <div id='responses-locationNameGet-200-schema-200' style="padding: 30px; border-left: 1px solid #eee; border-right: 1px solid #eee; border-bottom: 1px solid #eee;">
                                     <script>
                                       $(document).ready(function() {
                                         var schemaWrapper = {
   "description" : "OK",
   "content" : {
-    "text/plain" : {
+    "application/json" : {
       "schema" : {
-        "type" : "string",
-        "x-content-type" : "text/plain"
+        "type" : "object",
+        "x-content-type" : "application/json"
       },
       "examples" : {
         "Example#1" : {
-          "value" : "Hello World!"
+          "value" : {
+            "location" : {
+              "name" : "Santiago",
+              "region" : "Region Metropolitana",
+              "country" : "Chile",
+              "lat" : -33.45,
+              "lon" : -70.67,
+              "tz_id" : "America/Santiago",
+              "localtime_epoch" : 1696371811,
+              "localtime" : "2023-10-03 19:23"
+            },
+            "current" : {
+              "last_updated_epoch" : 1696371300,
+              "last_updated" : "2023-10-03 19:15",
+              "temp_c" : 16.0,
+              "temp_f" : 60.8,
+              "is_day" : 1,
+              "condition" : {
+                "text" : "Partly cloudy",
+                "icon" : "//cdn.weatherapi.com/weather/64x64/day/116.png",
+                "code" : 1003
+              },
+              "wind_mph" : 10.5,
+              "wind_kph" : 16.9,
+              "wind_degree" : 190,
+              "wind_dir" : "S",
+              "pressure_mb" : 1020.0,
+              "pressure_in" : 30.12,
+              "precip_mm" : 0.0,
+              "precip_in" : 0.0,
+              "humidity" : 48,
+              "cloud" : 25,
+              "feelslike_c" : 16.0,
+              "feelslike_f" : 60.8,
+              "vis_km" : 10.0,
+              "vis_miles" : 6.0,
+              "uv" : 3.0,
+              "gust_mph" : 7.2,
+              "gust_kph" : 11.6
+            }
+          }
         }
       }
     }
   }
 };
-                                        var schema = schemaWrapper.content["text/plain"].schema;
+                                        var schema = schemaWrapper.content["application/json"].schema;
                                         if (schema.$ref != null) {
                                           schema = defsParser.$refs.get(schema.$ref);
                                         } else {
@@ -977,14 +1052,14 @@ except ApiException as e:
 
                                         //console.log(JSON.stringify(schema));
                                         var view = new JSONSchemaView(schema, 3);
-                                        $('#responses-rootGet-200-schema-data').val(stringify(schema));
-                                        var result = $('#responses-rootGet-200-schema-200');
+                                        $('#responses-locationNameGet-200-schema-data').val(stringify(schema));
+                                        var result = $('#responses-locationNameGet-200-schema-200');
                                         result.empty();
                                         result.append(view.render());
                                       });
                                     </script>
                                   </div>
-                                  <input id='responses-rootGet-200-schema-data' type='hidden' value=''></input>
+                                  <input id='responses-locationNameGet-200-schema-data' type='hidden' value=''></input>
                                 </div>
                             </div>
 
