@@ -39,8 +39,6 @@ dependencies {
     implementation("io.lettuce:lettuce-core:6.2.6.RELEASE")
     implementation("com.redis:lettucemod:3.6.3") // Extension library
 
-    //implementation("io.github.crackthecodeabhi:kreds:0.9.0")
-
     testImplementation("io.ktor:ktor-server-tests-jvm")
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version")
 }
