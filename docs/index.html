@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Application API</title>
+  <title>Meteorological Challenge API</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta charset="UTF-8" />
@@ -715,7 +715,7 @@
       <div id="content">
         <div id="project">
           <div class="pull-left">
-            <h1>Application API</h1>
+            <h1>Meteorological Challenge API</h1>
           </div>
           <div class="clearfix"></div>
         </div>
@@ -724,7 +724,7 @@
             <h2 id="welcome-to-apidoc">API and SDK Documentation</h2>
               <div class="app-desc">Version: 1.0.0</div>
             <hr>
-            <div>Application API</div>
+            <div>Meteorological Challenge API</div>
           </div>
         </div>
         <div id="sections">
@@ -764,7 +764,7 @@
                           <div class="tab-pane active" id="examples-Default-locationNameGet-0-curl">
                            <pre class="prettyprint"><code class="language-bsh">curl -X GET\
 -H "Accept: application/json"\
-"http://0.0.0.0:8080/location/{name}"</code></pre>
+"http://localhost:8080/location/{name}"</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-Default-locationNameGet-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
@@ -832,9 +832,9 @@ DefaultApi *apiInstance = [[DefaultApi alloc] init];
                             </div>
 
                             <div class="tab-pane" id="examples-Default-locationNameGet-0-javascript">
-                              <pre class="prettyprint"><code class="language-js">var ApplicationApi = require('application_api');
+                              <pre class="prettyprint"><code class="language-js">var MeteorologicalChallengeApi = require('meteorological_challenge_api');
 
-var api = new ApplicationApi.DefaultApi()
+var api = new MeteorologicalChallengeApi.DefaultApi()
 var name = name_example; // {{String}} 
 
 var callback = function(error, data, response) {

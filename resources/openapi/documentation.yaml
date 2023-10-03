@@ -1,8 +1,69 @@
 openapi: "3.0.3"
 info:
-  title: "metereological_challenge API"
-  description: "metereological_challenge API"
+  title: "Meteorological Challenge API"
+  description: "Meteorological Challenge API"
   version: "1.0.0"
 servers:
-- url: "https://metereological_challenge"
-paths: {}
+  - url: "http://localhost:8080"
+paths:
+  /location/{name}:
+    get:
+      description: "Get location by name"
+      parameters:
+        - in: path
+          name: name
+          schema:
+            type: string
+          required: true
+      responses:
+        "200":
+          description: "OK"
+          content:
+            application/json:
+              schema:
+                type: "object"
+              examples:
+                Example#1:
+                  value: {
+                    "location": {
+                      "name": "Santiago",
+                      "region": "Region Metropolitana",
+                      "country": "Chile",
+                      "lat": -33.45,
+                      "lon": -70.67,
+                      "tz_id": "America/Santiago",
+                      "localtime_epoch": 1696371811,
+                      "localtime": "2023-10-03 19:23"
+                    },
+                    "current": {
+                      "last_updated_epoch": 1696371300,
+                      "last_updated": "2023-10-03 19:15",
+                      "temp_c": 16.0,
+                      "temp_f": 60.8,
+                      "is_day": 1,
+                      "condition": {
+                        "text": "Partly cloudy",
+                        "icon": "//cdn.weatherapi.com/weather/64x64/day/116.png",
+                        "code": 1003
+                      },
+                      "wind_mph": 10.5,
+                      "wind_kph": 16.9,
+                      "wind_degree": 190,
+                      "wind_dir": "S",
+                      "pressure_mb": 1020.0,
+                      "pressure_in": 30.12,
+                      "precip_mm": 0.0,
+                      "precip_in": 0.0,
+                      "humidity": 48,
+                      "cloud": 25,
+                      "feelslike_c": 16.0,
+                      "feelslike_f": 60.8,
+                      "vis_km": 10.0,
+                      "vis_miles": 6.0,
+                      "uv": 3.0,
+                      "gust_mph": 7.2,
+                      "gust_kph": 11.6
+                    }
+                  }
+components:
+  schemas:

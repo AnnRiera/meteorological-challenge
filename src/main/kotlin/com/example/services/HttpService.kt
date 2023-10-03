@@ -9,8 +9,7 @@ object HttpService {
     fun init(): HttpClient {
         val client =  HttpClient(CIO) {
             install(ContentNegotiation) {
-                json() // Example: Register JSON content transformation
-                // Add more transformations as needed for other content types
+                json()
             }
         }
         return client

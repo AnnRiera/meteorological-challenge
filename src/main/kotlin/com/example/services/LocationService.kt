@@ -35,12 +35,4 @@ object LocationService {
             throw Exception(e.message)
         }
     }
-
-    //fun getAllLocations() : MutableList<Locations> {
-        //val locations = arrayOf<Locations>()
-        //val results = locations.toMutableList()
-        //for (location in LocationsEnum.entries) {
-            //results.add(RedisService.get("$location"))
-        //}
-    //}
 }

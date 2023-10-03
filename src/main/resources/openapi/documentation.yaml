@@ -1,10 +1,10 @@
 openapi: "3.0.3"
 info:
-  title: "Application API"
-  description: "Application API"
+  title: "Meteorological Challenge API"
+  description: "Meteorological Challenge API"
   version: "1.0.0"
 servers:
-  - url: "http://0.0.0.0:8080"
+  - url: "http://localhost:8080"
 paths:
   /location/{name}:
     get:
